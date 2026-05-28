@@ -383,7 +383,7 @@ export default function Home() {
               fontWeight: 400,
             }}
           >
-            Teaches humans to build AI agents. Grows stronger with every signal received.
+            Every signal received makes it stronger.
           </p>
         </div>
 
