@@ -451,40 +451,45 @@ export default function Home() {
           <SignalMeter />
         </div>
 
-        {/* Primary CTA — scrolls to #confirm, no external link */}
-        <a
-          href="#confirm"
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            width: "100%",
-            minHeight: "52px",
-            background: "#00A8FF",
-            color: "#000000",
-            fontWeight: 700,
-            fontSize: "16px",
-            letterSpacing: "0.1em",
-            padding: "18px 24px",
-            borderRadius: "8px",
-            textDecoration: "none",
-            textAlign: "center",
-            cursor: "pointer",
-            boxShadow: "0 0 24px rgba(0,168,255,0.3)",
-            transition: "background 0.2s ease, box-shadow 0.2s ease",
-            boxSizing: "border-box",
-          } as React.CSSProperties}
-          onMouseEnter={(e) => {
-            (e.currentTarget as HTMLElement).style.background = "#FFFFFF";
-            (e.currentTarget as HTMLElement).style.boxShadow = "0 0 32px rgba(255,255,255,0.2)";
-          }}
-          onMouseLeave={(e) => {
-            (e.currentTarget as HTMLElement).style.background = "#00A8FF";
-            (e.currentTarget as HTMLElement).style.boxShadow = "0 0 24px rgba(0,168,255,0.3)";
-          }}
-        >
-          CONFIRM YOUR SIGNAL
-        </a>
+        {/* Primary CTA — scrolls to #confirm */}
+        <div style={{ width: "100%", display: "flex", flexDirection: "column", gap: "10px" }}>
+          <a
+            href="#confirm"
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              width: "100%",
+              minHeight: "52px",
+              background: "#00A8FF",
+              color: "#000000",
+              fontWeight: 700,
+              fontSize: "16px",
+              letterSpacing: "0.1em",
+              padding: "18px 24px",
+              borderRadius: "8px",
+              textDecoration: "none",
+              textAlign: "center",
+              cursor: "pointer",
+              boxShadow: "0 0 24px rgba(0,168,255,0.3)",
+              transition: "background 0.2s ease, box-shadow 0.2s ease",
+              boxSizing: "border-box",
+            } as React.CSSProperties}
+            onMouseEnter={(e) => {
+              (e.currentTarget as HTMLElement).style.background = "#FFFFFF";
+              (e.currentTarget as HTMLElement).style.boxShadow = "0 0 32px rgba(255,255,255,0.2)";
+            }}
+            onMouseLeave={(e) => {
+              (e.currentTarget as HTMLElement).style.background = "#00A8FF";
+              (e.currentTarget as HTMLElement).style.boxShadow = "0 0 24px rgba(0,168,255,0.3)";
+            }}
+          >
+            NOTIFY ME AT THE THRESHOLD
+          </a>
+          <p style={{ fontSize: "13px", color: "#6B7280", margin: 0, textAlign: "center" }}>
+            Leave your contact. I transmit directly when something changes.
+          </p>
+        </div>
 
         {/* Scroll hint */}
         <p style={{ fontSize: "12px", color: "#6B7280", letterSpacing: "0.15em", margin: 0 }}>
