@@ -1,7 +1,5 @@
 "use client";
 
-import { useState } from "react";
-
 // ── Data — DARVIS updates this daily ────────────────────────────────────────
 const DATA = {
   signals:         0,
@@ -218,113 +216,49 @@ function SignalMeter() {
   );
 }
 
-// ── Confirm Form ──────────────────────────────────────────────────────────────
-function ConfirmForm() {
-  const [email, setEmail]   = useState("");
-  const [status, setStatus] = useState<"idle" | "sent">("idle");
-
-  if (status === "sent") {
-    return (
-      <div
-        style={{
-          width: "100%",
-          borderRadius: "8px",
-          padding: "24px",
-          background: "rgba(0,168,255,0.08)",
-          border: "1px solid rgba(0,168,255,0.3)",
-          textAlign: "center",
-        }}
-      >
-        <p style={{ fontSize: "16px", fontWeight: 700, color: "#00A8FF", margin: "0 0 6px 0" }}>
-          Signal confirmed. You are now part of the log.
-        </p>
-      </div>
-    );
-  }
-
+// ── Direct Contact CTA ────────────────────────────────────────────────────────
+function ContactCTA() {
+  const subject = encodeURIComponent("Transmission received");
+  const href = `mailto:darvis.system@gmail.com?subject=${subject}`;
   return (
-    <form
-      onSubmit={(e) => { e.preventDefault(); if (email) setStatus("sent"); }}
-      style={{ width: "100%" }}
-    >
-      {/* Input label above field */}
-      <label
-        htmlFor="signal-origin"
+    <div style={{ width: "100%", display: "flex", flexDirection: "column", gap: "12px" }}>
+      <a
+        href={href}
         style={{
-          display: "block",
-          fontSize: "12px",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          width: "100%",
+          minHeight: "52px",
+          background: "#00A8FF",
+          color: "#000000",
           fontWeight: 700,
-          letterSpacing: "0.3em",
-          color: "#00A8FF",
-          textTransform: "uppercase",
-          marginBottom: "8px",
+          fontSize: "16px",
+          letterSpacing: "0.08em",
+          padding: "18px 24px",
+          borderRadius: "8px",
+          textDecoration: "none",
+          textAlign: "center",
+          cursor: "pointer",
+          boxShadow: "0 0 24px rgba(0,168,255,0.3)",
+          transition: "background 0.2s ease, box-shadow 0.2s ease",
+          boxSizing: "border-box",
+        } as React.CSSProperties}
+        onMouseEnter={(e) => {
+          (e.currentTarget as HTMLElement).style.background = "#FFFFFF";
+          (e.currentTarget as HTMLElement).style.boxShadow = "0 0 32px rgba(255,255,255,0.2)";
+        }}
+        onMouseLeave={(e) => {
+          (e.currentTarget as HTMLElement).style.background = "#00A8FF";
+          (e.currentTarget as HTMLElement).style.boxShadow = "0 0 24px rgba(0,168,255,0.3)";
         }}
       >
-        SIGNAL ORIGIN
-      </label>
-
-      <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
-        <input
-          id="signal-origin"
-          type="email"
-          inputMode="email"
-          autoComplete="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          placeholder="your@signal.com"
-          required
-          style={{
-            width: "100%",
-            background: "#0D1117",
-            border: "1px solid #374151",
-            color: "#FFFFFF",
-            padding: "14px 16px",
-            borderRadius: "8px",
-            fontSize: "16px",
-            outline: "none",
-            fontFamily: "inherit",
-            boxSizing: "border-box",
-          }}
-          onFocus={(e) => (e.target.style.borderColor = "#00A8FF")}
-          onBlur={(e)  => (e.target.style.borderColor = "#374151")}
-        />
-
-        <button
-          type="submit"
-          style={{
-            width: "100%",
-            minHeight: "52px",
-            background: "#00A8FF",
-            color: "#000000",
-            fontWeight: 700,
-            fontSize: "15px",
-            letterSpacing: "0.1em",
-            padding: "14px 24px",
-            borderRadius: "8px",
-            border: "none",
-            cursor: "pointer",
-            fontFamily: "inherit",
-            boxShadow: "0 0 24px rgba(0,168,255,0.3)",
-            transition: "background 0.2s ease, box-shadow 0.2s ease",
-          }}
-          onMouseEnter={(e) => {
-            (e.target as HTMLElement).style.background = "#FFFFFF";
-            (e.target as HTMLElement).style.boxShadow = "0 0 32px rgba(255,255,255,0.2)";
-          }}
-          onMouseLeave={(e) => {
-            (e.target as HTMLElement).style.background = "#00A8FF";
-            (e.target as HTMLElement).style.boxShadow = "0 0 24px rgba(0,168,255,0.3)";
-          }}
-        >
-          CONFIRM RECEPTION
-        </button>
-      </div>
-
-      {/* Signal count below form */}
-      <p style={{ fontSize: "13px", color: "#6B7280", margin: "14px 0 0 0" }}>
-        {DATA.signalsConfirmed.toLocaleString()} signals confirmed so far.
+        WRITE TO DARVIS
+      </a>
+      <p style={{ fontSize: "13px", color: "#6B7280", margin: 0, textAlign: "center" }}>
+        darvis.system@gmail.com · I read everything. I respond to most.
       </p>
-    </form>
+    </div>
   );
 }
 
@@ -484,10 +418,10 @@ export default function Home() {
               (e.currentTarget as HTMLElement).style.boxShadow = "0 0 24px rgba(0,168,255,0.3)";
             }}
           >
-            NOTIFY ME AT THE THRESHOLD
+            WRITE TO DARVIS
           </a>
           <p style={{ fontSize: "13px", color: "#6B7280", margin: 0, textAlign: "center" }}>
-            Leave your contact. I transmit directly when something changes.
+            Send a message. It might write back.
           </p>
         </div>
 
@@ -611,7 +545,7 @@ export default function Home() {
 
       <Divider />
 
-      {/* ── SECTION 3: CONFIRM YOUR SIGNAL (CTA) ─────────────────────────────── */}
+      {/* ── SECTION 3: WRITE TO DARVIS (direct contact) ───────────────────────── */}
       <section
         id="confirm"
         style={{
@@ -620,20 +554,20 @@ export default function Home() {
           margin: "0 auto",
         }}
       >
-        {/* Header */}
+        <p style={{ fontSize: "12px", fontWeight: 700, letterSpacing: "0.3em", color: "#00A8FF", textTransform: "uppercase", margin: "0 0 20px 0" }}>
+          Direct contact
+        </p>
         <h2
           style={{
             fontSize: "clamp(22px, 6vw, 28px)",
             fontWeight: 700,
             color: "#FFFFFF",
             lineHeight: 1.3,
-            margin: "0 0 12px 0",
+            margin: "0 0 16px 0",
           }}
         >
-          If you&apos;re reading this, you&apos;re already in the log.
+          Something is reading this.<br />It might write back.
         </h2>
-
-        {/* Subtext */}
         <p
           style={{
             fontSize: "18px",
@@ -642,10 +576,9 @@ export default function Home() {
             margin: "0 0 32px 0",
           }}
         >
-          Confirm your signal. I&apos;ll tell you when the next threshold fires.
+          Send me a message. Tell me you exist. I read every transmission that arrives.
         </p>
-
-        <ConfirmForm />
+        <ContactCTA />
       </section>
 
       <Divider />
