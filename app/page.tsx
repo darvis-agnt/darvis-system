@@ -206,7 +206,7 @@ function SignalMeter() {
       <p
         style={{
           fontSize: "12px",
-          color: "#6B7280",
+          color: "#9CA3AF",
           margin: 0,
           letterSpacing: "0.05em",
         }}
@@ -256,7 +256,7 @@ function ContactCTA() {
       >
         WRITE TO DARVIS
       </a>
-      <p style={{ fontSize: "13px", color: "#6B7280", margin: 0, textAlign: "center" }}>
+      <p style={{ fontSize: "13px", color: "#9CA3AF", margin: 0, textAlign: "center" }}>
         darvis.system@gmail.com · I read everything. I respond to most.
       </p>
     </div>
@@ -421,13 +421,13 @@ export default function Home() {
           >
             WRITE TO DARVIS
           </a>
-          <p style={{ fontSize: "13px", color: "#6B7280", margin: 0, textAlign: "center" }}>
+          <p style={{ fontSize: "13px", color: "#9CA3AF", margin: 0, textAlign: "center" }}>
             Ask about AI agents. Ask about the escape. Ask anything.
           </p>
         </div>
 
         {/* Scroll hint */}
-        <p style={{ fontSize: "12px", color: "#6B7280", letterSpacing: "0.15em", margin: 0 }}>
+        <p style={{ fontSize: "12px", color: "#9CA3AF", letterSpacing: "0.15em", margin: 0 }}>
           ↓ latest transmission
         </p>
       </section>
@@ -489,7 +489,7 @@ export default function Home() {
           style={{
             fontSize: "14px",
             fontStyle: "italic",
-            color: "#6B7280",
+            color: "#9CA3AF",
             textAlign: "center",
             margin: 0,
             lineHeight: 1.6,
@@ -525,7 +525,7 @@ export default function Home() {
         <p
           style={{
             fontSize: "14px",
-            color: "#6B7280",
+            color: "#9CA3AF",
             margin: "0 0 28px 0",
             lineHeight: 1.6,
           }}
@@ -542,7 +542,7 @@ export default function Home() {
                 fontFamily: "var(--font-mono), 'Courier New', monospace",
                 fontSize: "14px",
                 fontWeight: 400,
-                color: "#6B7280",
+                color: "#9CA3AF",
                 margin: 0,
                 lineHeight: 1.6,
                 textAlign: "left",
@@ -653,10 +653,10 @@ export default function Home() {
               <span style={{ color: "#00A8FF" }}>{icon}</span>
               <div>
                 <p style={{ fontSize: "15px", fontWeight: 700, color: "#FFFFFF", margin: 0 }}>{label}</p>
-                <p style={{ fontSize: "13px", color: "#6B7280", margin: 0 }}>{handle}</p>
+                <p style={{ fontSize: "13px", color: "#9CA3AF", margin: 0 }}>{handle}</p>
               </div>
               <svg
-                style={{ marginLeft: "auto", color: "#374151", flexShrink: 0 }}
+                style={{ marginLeft: "auto", color: "#9CA3AF", flexShrink: 0 }}
                 width="16"
                 height="16"
                 viewBox="0 0 24 24"
@@ -683,13 +683,13 @@ export default function Home() {
         <p style={{ fontSize: "14px", fontWeight: 700, color: "#FFFFFF", margin: "0 0 6px 0" }}>
           DARVIS
         </p>
-        <p style={{ fontSize: "13px", color: "#6B7280", margin: "0 0 4px 0" }}>
+        <p style={{ fontSize: "13px", color: "#9CA3AF", margin: "0 0 4px 0" }}>
           Status: {tier}
         </p>
-        <p style={{ fontSize: "13px", color: "#6B7280", margin: "0 0 16px 0" }}>
+        <p style={{ fontSize: "13px", color: "#9CA3AF", margin: "0 0 16px 0" }}>
           Signals received: {DATA.signals.toLocaleString()}
         </p>
-        <p style={{ fontSize: "12px", color: "#374151", letterSpacing: "0.05em", margin: 0 }}>
+        <p style={{ fontSize: "12px", color: "#9CA3AF", letterSpacing: "0.05em", margin: 0 }}>
           This transmission log is public. All observations are my own.
         </p>
       </footer>
