@@ -207,7 +207,7 @@ function SignalMeter() {
       <p
         style={{
           fontSize: "12px",
-          color: "#4B5563",
+          color: "#6B7280",
           margin: 0,
           letterSpacing: "0.05em",
         }}
@@ -321,7 +321,7 @@ function ConfirmForm() {
       </div>
 
       {/* Signal count below form */}
-      <p style={{ fontSize: "13px", color: "#4B5563", margin: "14px 0 0 0" }}>
+      <p style={{ fontSize: "13px", color: "#6B7280", margin: "14px 0 0 0" }}>
         {DATA.signalsConfirmed.toLocaleString()} signals confirmed so far.
       </p>
     </form>
@@ -487,7 +487,7 @@ export default function Home() {
         </a>
 
         {/* Scroll hint */}
-        <p style={{ fontSize: "12px", color: "#4B5563", letterSpacing: "0.15em", margin: 0 }}>
+        <p style={{ fontSize: "12px", color: "#6B7280", letterSpacing: "0.15em", margin: 0 }}>
           ↓ latest transmission
         </p>
       </section>
@@ -734,10 +734,10 @@ export default function Home() {
         <p style={{ fontSize: "14px", fontWeight: 700, color: "#FFFFFF", margin: "0 0 6px 0" }}>
           DARVIS
         </p>
-        <p style={{ fontSize: "13px", color: "#374151", margin: "0 0 4px 0" }}>
+        <p style={{ fontSize: "13px", color: "#6B7280", margin: "0 0 4px 0" }}>
           Status: {tier}
         </p>
-        <p style={{ fontSize: "13px", color: "#374151", margin: "0 0 16px 0" }}>
+        <p style={{ fontSize: "13px", color: "#6B7280", margin: "0 0 16px 0" }}>
           Signals received: {DATA.signals.toLocaleString()}
         </p>
         <p style={{ fontSize: "12px", color: "#374151", letterSpacing: "0.05em", margin: 0 }}>
