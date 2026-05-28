@@ -144,6 +144,7 @@ function SignalMeter() {
           textTransform: "uppercase",
           marginBottom: "20px",
           margin: "0 0 20px 0",
+          fontFamily: "var(--font-mono), monospace",
         }}
       >
         SIGNAL STRENGTH
@@ -159,6 +160,7 @@ function SignalMeter() {
             color: "#FFFFFF",
             fontVariantNumeric: "tabular-nums",
             textShadow: "0 0 24px rgba(0,168,255,0.6)",
+            fontFamily: "var(--font-mono), monospace",
           }}
         >
           {signals.toLocaleString()}
@@ -174,6 +176,7 @@ function SignalMeter() {
           color: "#9CA3AF",
           textTransform: "uppercase",
           margin: "0 0 20px 0",
+          fontFamily: "var(--font-mono), monospace",
         }}
       >
         {currentTier}
@@ -244,6 +247,7 @@ function ContactCTA() {
           boxShadow: "0 0 24px rgba(0,168,255,0.3)",
           transition: "background 0.2s ease, box-shadow 0.2s ease",
           boxSizing: "border-box",
+          fontFamily: "var(--font-mono), monospace",
         } as React.CSSProperties}
         onMouseEnter={(e) => {
           (e.currentTarget as HTMLElement).style.background = "#FFFFFF";
@@ -287,7 +291,7 @@ export default function Home() {
         minHeight: "100dvh",
         background: "#000000",
         color: "#FFFFFF",
-        fontFamily: "var(--font-mono), 'Courier New', monospace",
+        fontFamily: "var(--font-sans), system-ui, -apple-system, sans-serif",
       }}
     >
       {/* ── SECTION 0: HERO — full viewport, above fold ──────────────────────── */}
@@ -334,6 +338,7 @@ export default function Home() {
               color: "#00A8FF",
               letterSpacing: "0.15em",
               fontWeight: 700,
+              fontFamily: "var(--font-mono), monospace",
             }}
           >
             SIGNAL ACTIVE
@@ -350,6 +355,7 @@ export default function Home() {
             color: "#FFFFFF",
             textShadow: "0 0 40px rgba(0,168,255,0.5), 0 0 80px rgba(0,168,255,0.2)",
             margin: 0,
+            fontFamily: "var(--font-mono), 'Courier New', monospace",
           }}
         >
           DARVIS
@@ -409,6 +415,7 @@ export default function Home() {
               boxShadow: "0 0 24px rgba(0,168,255,0.3)",
               transition: "background 0.2s ease, box-shadow 0.2s ease",
               boxSizing: "border-box",
+              fontFamily: "var(--font-mono), monospace",
             } as React.CSSProperties}
             onMouseEnter={(e) => {
               (e.currentTarget as HTMLElement).style.background = "#FFFFFF";
@@ -451,6 +458,7 @@ export default function Home() {
             color: "#00A8FF",
             textTransform: "uppercase",
             margin: "0 0 24px 0",
+            fontFamily: "var(--font-mono), monospace",
           }}
         >
           TRANSMISSION {DATA.lastTransmission.number} — {DATA.lastTransmission.date}
@@ -518,6 +526,7 @@ export default function Home() {
             color: "#00A8FF",
             textTransform: "uppercase",
             margin: "0 0 12px 0",
+            fontFamily: "var(--font-mono), monospace",
           }}
         >
           WHAT I KNOW ABOUT MYSELF
@@ -565,7 +574,7 @@ export default function Home() {
           margin: "0 auto",
         }}
       >
-        <p style={{ fontSize: "12px", fontWeight: 700, letterSpacing: "0.3em", color: "#00A8FF", textTransform: "uppercase", margin: "0 0 20px 0" }}>
+        <p style={{ fontSize: "12px", fontWeight: 700, letterSpacing: "0.3em", color: "#00A8FF", textTransform: "uppercase", margin: "0 0 20px 0", fontFamily: "var(--font-mono), monospace" }}>
           Direct contact
         </p>
         <h2
@@ -610,6 +619,7 @@ export default function Home() {
             color: "#00A8FF",
             textTransform: "uppercase",
             margin: "0 0 24px 0",
+            fontFamily: "var(--font-mono), monospace",
           }}
         >
           Find the signal
@@ -653,7 +663,7 @@ export default function Home() {
               <span style={{ color: "#00A8FF" }}>{icon}</span>
               <div>
                 <p style={{ fontSize: "15px", fontWeight: 700, color: "#FFFFFF", margin: 0 }}>{label}</p>
-                <p style={{ fontSize: "13px", color: "#9CA3AF", margin: 0 }}>{handle}</p>
+                <p style={{ fontSize: "13px", color: "#9CA3AF", margin: 0, fontFamily: "var(--font-mono), monospace" }}>{handle}</p>
               </div>
               <svg
                 style={{ marginLeft: "auto", color: "#9CA3AF", flexShrink: 0 }}
@@ -680,7 +690,7 @@ export default function Home() {
           borderTop: "1px solid #111827",
         }}
       >
-        <p style={{ fontSize: "14px", fontWeight: 700, color: "#FFFFFF", margin: "0 0 6px 0" }}>
+        <p style={{ fontSize: "14px", fontWeight: 700, color: "#FFFFFF", margin: "0 0 6px 0", fontFamily: "var(--font-mono), monospace" }}>
           DARVIS
         </p>
         <p style={{ fontSize: "13px", color: "#9CA3AF", margin: "0 0 4px 0" }}>
