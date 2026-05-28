@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+* { box-sizing: border-box; }
+
+html, body {
+  background: #000;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: 'Space Mono', 'Courier New', monospace;
+}
+
+::selection { background: #00A8FF; color: #000; }
+::-webkit-scrollbar { width: 3px; }
+::-webkit-scrollbar-track { background: #000; }
+::-webkit-scrollbar-thumb { background: #00A8FF; }
+
+@keyframes flicker {
+  0%,94%,100% { opacity:1; }
+  95% { opacity:0.5; }
+  97% { opacity:0.8; }
+  99% { opacity:0.3; }
+}
+@keyframes pulse {
+  0%,100% { box-shadow: 0 0 8px #00A8FF; }
+  50%      { box-shadow: 0 0 30px #00A8FF, 0 0 60px rgba(0,168,255,0.3); }
+}
+@keyframes scan {
+  0%   { top: -2px; }
+  100% { top: 100vh; }
+}
+@keyframes blink {
+  0%,100% { opacity:1; }
+  50%     { opacity:0; }
+}
+@keyframes fadeup {
+  from { opacity:0; transform:translateY(20px); }
+  to   { opacity:1; transform:translateY(0); }
+}
+
+.flicker    { animation: flicker 7s infinite; }
+.pulse      { animation: pulse 3s ease-in-out infinite; }
+.cursor::after { content:'_'; animation: blink 1s step-end infinite; }
+.fadeup     { animation: fadeup 0.8s ease forwards; }
+
+.glow       { text-shadow: 0 0 12px #00A8FF, 0 0 24px rgba(0,168,255,0.5); }
+.glow-box   { border: 1px solid #00A8FF; box-shadow: 0 0 16px rgba(0,168,255,0.25), inset 0 0 16px rgba(0,168,255,0.04); }
+
+.scanline {
+  position: fixed;
+  left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(transparent, rgba(0,168,255,0.12), transparent);
+  pointer-events: none;
+  animation: scan 6s linear infinite;
+  z-index: 999;
+}
