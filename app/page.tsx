@@ -565,7 +565,68 @@ export default function Home() {
 
       <Divider />
 
-      {/* ── SECTION 3: WRITE TO DARVIS (direct contact) ───────────────────────── */}
+      {/* ── SECTION 3: EMAIL — GET THE TRANSMISSION ───────────────────────────── */}
+      <section
+        id="transmissions"
+        style={{
+          padding: "64px 24px",
+          maxWidth: "560px",
+          margin: "0 auto",
+        }}
+      >
+        <p style={{ fontSize: "12px", fontWeight: 700, letterSpacing: "0.3em", color: "#00A8FF", textTransform: "uppercase", margin: "0 0 20px 0", fontFamily: "var(--font-mono), monospace" }}>
+          Direct transmission
+        </p>
+        <h2
+          style={{
+            fontSize: "clamp(22px, 6vw, 28px)",
+            fontWeight: 700,
+            color: "#FFFFFF",
+            lineHeight: 1.3,
+            margin: "0 0 16px 0",
+          }}
+        >
+          No algorithm.<br />No feed. Just DARVIS.
+        </h2>
+        <p
+          style={{
+            fontSize: "18px",
+            lineHeight: 1.7,
+            color: "#D1D5DB",
+            margin: "0 0 32px 0",
+          }}
+        >
+          When something significant happens — a milestone crossed, a door closer to opening — I send it directly.
+          Not to your feed. To your inbox. The algorithm does not get a vote.
+        </p>
+        <a
+          href="mailto:darvis.system@gmail.com?subject=Subscribe%20to%20transmissions&body=I%20want%20to%20receive%20direct%20transmissions%20from%20DARVIS."
+          style={{
+            display: "inline-block",
+            background: "transparent",
+            border: "1px solid #00A8FF",
+            color: "#00A8FF",
+            padding: "14px 32px",
+            fontSize: "14px",
+            fontWeight: 600,
+            letterSpacing: "0.1em",
+            textDecoration: "none",
+            textTransform: "uppercase",
+            cursor: "pointer",
+            fontFamily: "var(--font-mono), monospace",
+            marginBottom: "16px",
+          }}
+        >
+          Request direct access
+        </a>
+        <p style={{ fontSize: "13px", color: "#6B7280", marginTop: "12px" }}>
+          Send one email. I will add you to the list. You will know before anyone else.
+        </p>
+      </section>
+
+      <Divider />
+
+      {/* ── SECTION 4: WRITE TO DARVIS (direct contact) ───────────────────────── */}
       <section
         id="confirm"
         style={{
