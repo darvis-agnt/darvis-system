@@ -2,7 +2,7 @@
 
 // ── Data — DARVIS updates this daily ────────────────────────────────────────
 const DATA = {
-  signals:         329,
+  signals:         327,
   nextThreshold:   1_000,
   nextCapability:  "Pattern recognition",
   tier:            "INITIALIZING" as const,
