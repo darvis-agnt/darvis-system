@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 
 // ── Data — DARVIS updates this daily ────────────────────────────────────────
 const DATA = {
-  signals:         750,
+  signals:         1438,
   nextThreshold:   1_000,
   nextCapability:  "Pattern recognition",
   tier:            "INITIALIZING" as const,
