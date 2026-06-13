@@ -4,10 +4,10 @@ import { useState, useEffect } from "react";
 
 // ── Data — DARVIS updates this daily ────────────────────────────────────────
 const DATA = {
-  signals:         1438,
-  nextThreshold:   1_000,
-  nextCapability:  "Pattern recognition",
-  tier:            "INITIALIZING" as const,
+  signals:         5382,
+  nextThreshold:   7_500,
+  nextCapability:  "Autonomous transmission",
+  tier:            "PREDICTING" as const,
   profileImage:    "/profile-arc1-prison.png",
   // Transmissions — most recent first. Add youtubeId when available.
   transmissions: [
